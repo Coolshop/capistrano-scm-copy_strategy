@@ -14,7 +14,7 @@ namespace :copy_strategy do
   	on release_roles :all do
   	  within repo_path do 
   		warn "test, on: 3"
-  	    copy_strategy_plugin.done 
+  		copy_strategy_plugin.archive_to_release_path
   	  end
   	end
   end
@@ -22,10 +22,8 @@ namespace :copy_strategy do
   desc "Update code"
   task update: :'copy_strategy:clean' do
   	on release_roles :all do
-  	  within repo_path do
-        copy_strategy_plugin.upload
-  		warn "test, on: 2"
-      end
+      archive = copy_strategy_plugin.create_archive
+	  upload!(archive, repo_path)
   	end
   end
 
