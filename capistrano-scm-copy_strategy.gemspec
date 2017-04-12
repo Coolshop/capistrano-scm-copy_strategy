@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name        = 'capistrano-scm-copy-strategy'
+  s.name        = 'capistrano-scm-copy_strategy'
   s.version     = '0.1.0'
   s.date        = '2017-04-10'
   s.summary     = "A copy strategy for Capistrano 3, which mimics the :copy scm of Capistrano 2."

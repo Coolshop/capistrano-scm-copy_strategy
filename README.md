@@ -1,4 +1,4 @@
-capistrano-scm-copy-strategy
+capistrano-scm-copy_strategy
 ============================
 
 A copy strategy for Capistrano 3, which mimics the `:copy` scm of Capistrano 2.
@@ -9,13 +9,13 @@ This will make Capistrano tar the current directory, upload it to the server(s) 
 Installation
 ============
 
-First make sure you install the capistrano-scm-copy-strategy by adding it to your `Gemfile`:
+First make sure you install the capistrano-scm-copy_strategy by adding it to your `Gemfile`:
 
-    gem "capistrano-scm-copy-strategy"
+    gem "capistrano-scm-copy_strategy"
 
 Add to Capfile:
 
-    require 'capistrano/scm/copy-strategy'
+    require 'capistrano/scm/copy_strategy'
     install_plugin Capistrano::SCM::CopyStrategy
     
 TODO
