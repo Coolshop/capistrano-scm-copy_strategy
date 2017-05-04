@@ -1,6 +1,9 @@
 capistrano-scm-copy_strategy
 ============================
 
+[![Gem Version](https://badge.fury.io/rb/capistrano-scm-copy_strategy.svg)](https://badge.fury.io/rb/capistrano-scm-copy_strategy)
+
+
 A copy strategy for Capistrano 3, which mimics the `:copy` scm of Capistrano 2.
 
 This will make Capistrano tar the current directory, upload it to the server(s) and then extract it in the release directory.
