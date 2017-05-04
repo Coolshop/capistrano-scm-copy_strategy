@@ -13,7 +13,6 @@ namespace :copy_strategy do
   task create_release: :'copy_strategy:update' do
   	on release_roles :all do
   	  within repo_path do 
-  		warn "test, on: 3"
   		copy_strategy_plugin.archive_to_release_path
   	  end
   	end

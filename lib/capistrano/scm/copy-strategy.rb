@@ -42,15 +42,16 @@ module Capistrano
 	    exclude_dirs.push(archive_name)
 	    temp_folder = fetch(:temp_folder)
 
-	    warn temp_folder
-
 	    FileUtils.copy_entry include_dir, "#{temp_folder}/#{env.release_timestamp}"
 
 	    # sh "ls -al #{temp_folder}/#{env.release_timestamp}"
 	    
-	    exclude_dirs.map { |dir| FileUtils.rm_rf "#{temp_folder}/#{env.release_timestamp}/#{dir}" }
+	    exclude_dirs.map { |dir| 
+        FileUtils.rm_rf "#{temp_folder}/#{env.release_timestamp}/#{dir}" 
+        FileUtils.rm_rf Dir.glob("#{temp_folder}/#{env.release_timestamp}/#{dir}") 
+      }
 
-	    sh "ls -al #{temp_folder}/#{env.release_timestamp}"
+	    sh "ls -al #{temp_folder}/#{env.release_timestamp}/web"
 	    
 	    tar_verbose = fetch(:tar_verbose, true) ? "v" : ""
 
