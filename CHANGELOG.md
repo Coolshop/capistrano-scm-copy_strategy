@@ -2,6 +2,12 @@ Changelog
 =========
 
 
+## `1.0.1`
+
+https://github.com/Coolshop/capistrano-scm-copy-strategy/compare/1.0.1...1.0.0
+
+* Fix check of the copied temp folder. Path corrected. 
+
 ## `1.0.0`
 
 https://github.com/Coolshop/capistrano-scm-copy-strategy/compare/1.0.0...0.1.0
