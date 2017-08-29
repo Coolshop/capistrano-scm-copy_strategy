@@ -51,7 +51,7 @@ module Capistrano
         FileUtils.rm_rf Dir.glob("#{temp_folder}/#{env.release_timestamp}/#{dir}") 
       }
 
-	    sh "ls -al #{temp_folder}/#{env.release_timestamp}/web"
+	    sh "ls -al #{temp_folder}/#{env.release_timestamp}"
 	    
 	    tar_verbose = fetch(:tar_verbose, true) ? "v" : ""
 
