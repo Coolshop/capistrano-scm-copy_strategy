@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'capistrano-scm-copy_strategy'
-  s.version     = '1.0.2'
+  s.version     = '1.0.3'
   s.date        = '2017-04-10'
   s.summary     = "A copy strategy for Capistrano 3, which mimics the :copy scm of Capistrano 2."
   s.description = "This will make Capistrano tar the current directory, upload it to the server(s) and then extract it in the release directory."
