@@ -22,7 +22,9 @@ namespace :copy_strategy do
   task update: :'copy_strategy:clean' do
   	on release_roles :all do
       archive = copy_strategy_plugin.create_archive
-	  upload!(archive, repo_path)
+      within repo_path do
+       upload! archive, "."
+      end
   	end
   end
 
